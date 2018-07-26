@@ -31,7 +31,12 @@ for i in range(len(SAP)):
     if SAP.iloc[i] == int(SAP_Input):
         SAP_Number.append(lab_orders.iloc[i])
         i += 1
-
+    elif SAP.iloc[i] == int(SAP_Input):
+        SAP_Number.append(lab_orders.iloc[i])
+        i += 1
+    elif SAP.iloc[i] == str(SAP_Input):
+        SAP_Number.append(lab_orders.iloc[i])
+        i += 1
 
 writer = pd.ExcelWriter(r'C:\Users\Mike Murphy\Desktop\SAP_' + str(SAP_Input) + '_2018.xlsx')
 SAP_Number_df = pd.DataFrame(SAP_Number)
